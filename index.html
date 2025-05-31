@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Slots</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="slot_machine_body">
+        <div class="game-header">
+            <h1 class="game-title">Lucky Slots</h1>
+            <div class="balance_section">
+                <div class="balance_container">
+                    <strong>Balance:</strong>
+                    <p id="balanceValue">0</p>
+                    <span class="currency">$</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-display">
+            <div class="your_win">
+                <span class="win-text">Try your luck!</span>
+            </div>
+
+            <div class="spins_field">
+                <div class="slot-container">
+                    <div class="slot spin1">🍒</div>
+                </div>
+                <div class="slot-container">
+                    <div class="slot spin2">🍒</div>
+                </div>
+                <div class="slot-container">
+                    <div class="slot spin3">🍒</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="spin_btn" class="spin_button">
+                <span class="button-text">SPIN!</span>
+                <span class="button-cost">-20$</span>
+            </button>
+
+            <div class="deposit_section">
+                <input placeholder="Enter sum to deposit" id="dep_value" type="number" min="0" step="0.01">
+                <button id="dep" class="deposit_button">Deposit</button>
+            </div>
+        </div>
+
+        <div class="winning_combinations">
+            <h3>Winning Combinations</h3>
+            <div class="combinations_list">
+                <div class="combination">
+                    <span>🍒🍒🍒</span>
+                    <span>40$</span>
+                </div>
+                <div class="combination">
+                    <span>🍋🍋🍋</span>
+                    <span>40$</span>
+                </div>
+                <div class="combination">
+                    <span>🥥🥥🥥</span>
+                    <span>40$</span>
+                </div>
+                <div class="combination">
+                    <span>Any Two Same</span>
+                    <span>10$</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
