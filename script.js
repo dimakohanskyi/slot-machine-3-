@@ -55,11 +55,11 @@ function spinGame(){
 
         // Перевіряємо виграш
         if (randomItems[0] === randomItems[1] && randomItems[1] === randomItems[2]) {
-            document.getElementById("balanceValue").textContent = balance + bigWin;
+            document.getElementById("balanceValue").textContent = (balance - priceSpin) + bigWin;
             document.querySelector(".your_win").innerHTML = `<span class="win-text">Your Big Win: ${bigWin}$</span>`;
             slots.forEach(slot => slot.classList.add("win-animation"));
         } else if (randomItems[0] === randomItems[1] || randomItems[1] === randomItems[2] || randomItems[0] === randomItems[2]) {
-            document.getElementById("balanceValue").textContent = balance + smallWin;
+            document.getElementById("balanceValue").textContent = (balance - priceSpin) + smallWin;
             document.querySelector(".your_win").innerHTML = `<span class="win-text">Your Win: ${smallWin}$</span>`;
             slots.forEach(slot => slot.classList.add("win-animation"));
         } else {
@@ -67,7 +67,6 @@ function spinGame(){
             slots.forEach(slot => slot.classList.add("lose-animation"));
         }
 
-        // Прибираємо анімації через 0.5 секунди
         setTimeout(() => {
             slots.forEach(slot => {
                 slot.classList.remove("win-animation", "lose-animation");
